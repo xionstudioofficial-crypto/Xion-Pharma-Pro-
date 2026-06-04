@@ -1,0 +1,6 @@
+{
+  "name": "Xion Pharma Pro",
+  "description": "AI-Powered Pharmacy ERP SaaS Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
