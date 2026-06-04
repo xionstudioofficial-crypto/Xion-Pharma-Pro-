@@ -46,7 +46,7 @@ const suppliersData = [
   { id: '6', initials: 'SC', name: 'SteriCare Corp', code: 'SUP-006', category: 'Medical Equipment', catColor: 'text-teal-600 bg-teal-50', contactName: 'Katherine Lee', contactEmail: 'katherine@stericare.com', orders: 134, spend: '$412,300', status: 'Inactive', statusColor: 'text-slate-500 bg-slate-100', statusDot: 'bg-slate-400', avatarColor: 'from-purple-500 to-purple-300' },
 ];
 
-export default function SupplierDashboard({ setView }: { setView: (view: 'dashboard' | 'medicine' | 'inventory' | 'pos' | 'suppliers') => void }) {
+export default function SupplierDashboard({ setView }: { setView: (view: any) => void }) {
   const [search, setSearch] = useState('');
 
   const filteredSuppliers = suppliersData.filter(s => 

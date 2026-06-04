@@ -79,7 +79,7 @@ const medicinesData = [
   }
 ];
 
-export default function MedicineManagement({ setView }: { setView: (view: 'dashboard' | 'medicine' | 'inventory' | 'pos') => void }) {
+export default function MedicineManagement({ setView }: { setView: (view: any) => void }) {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showBarcodeModal, setShowBarcodeModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');

@@ -25,7 +25,7 @@ const catIcon: Record<string, string> = {Tablet:'💊',Syrup:'🧴',Injection:'�
 
 type CartItem = typeof productsData[0] & { qty: number };
 
-export default function POSDashboard({ setView }: { setView: (view: 'dashboard' | 'medicine' | 'inventory' | 'pos') => void }) {
+export default function POSDashboard({ setView }: { setView: (view: any) => void }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [activeCat, setActiveCat] = useState('all');
   const [search, setSearch] = useState('');

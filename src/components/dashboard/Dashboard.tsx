@@ -9,7 +9,7 @@ import TransactionsTable from './TransactionsTable';
 import AlertPanel from './AlertPanel';
 import TopProducts from './TopProducts';
 
-export default function Dashboard({ setView }: { setView: (view: 'dashboard' | 'medicine' | 'inventory' | 'pos') => void }) {
+export default function Dashboard({ setView }: { setView: (view: any) => void }) {
   return (
     <div className="flex min-h-screen bg-slate-50">
       <Sidebar currentView="dashboard" setView={setView} />

@@ -114,7 +114,34 @@ export default function LoginPage({ onSignup, onLoginSuccess }: { onSignup: () =
                       Sign in to your Xion Pharma Pro workspace.
                     </p>
 
-                    <button type="button" onClick={onLoginSuccess} className="mt-6 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-200 p-3 font-semibold text-sm hover:bg-slate-50 transition">
+                    {/* Quick Role Fill-ins */}
+                    <div className="mt-5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200">
+                      <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2.5">Quick Testing Access</div>
+                      <div className="grid grid-cols-2 gap-2">
+                        <button 
+                          type="button"
+                          onClick={() => {
+                            setEmail("demo@xion.pro");
+                            setPassword("password123");
+                          }}
+                          className="px-3 py-2 bg-white hover:bg-slate-100 border border-slate-200 text-[11px] font-black text-slate-700 rounded-xl shadow-xs text-center transition"
+                        >
+                          Pharmacy Admin
+                        </button>
+                        <button 
+                          type="button"
+                          onClick={() => {
+                            setEmail("admin@xion.pro");
+                            setPassword("password123");
+                          }}
+                          className="px-3 py-2 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-700 text-[11px] font-black rounded-xl shadow-xs text-center transition"
+                        >
+                          Super Admin UI
+                        </button>
+                      </div>
+                    </div>
+
+                    <button type="button" onClick={onLoginSuccess} className="mt-5 w-full flex items-center justify-center gap-2 rounded-xl border border-slate-200 p-3 font-semibold text-sm hover:bg-slate-50 transition">
                       <svg width="18" height="18" viewBox="0 0 18 18"><path d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.13-.86 2.08-1.82 2.74v2.24h2.9c1.69-1.57 2.68-3.88 2.68-6.62Z" fill="#4285F4"/><path d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.9-2.24c-.81.54-1.85.86-3.06.86-2.34 0-4.32-1.58-5.02-3.7H1.02v2.3C2.5 15.65 5.48 18 9 18Z" fill="#34A853"/><path d="M3.98 10.74c-.18-.54-.28-1.12-.28-1.74s.1-1.2.28-1.74V4.96H1.02C.37 6.26 0 7.74 0 9.28s.37 3.02 1.02 4.32l2.96-2.86Z" fill="#FBBC05"/><path d="M9 3.58c1.32 0 2.5.45 3.44 1.34l2.58-2.58C13.47.88 11.43 0 9 0 5.48 0 2.5 2.35 1.02 5.26l2.96 2.34c.7-2.12 2.68-3.7 5.02-3.7Z" fill="#EA4335"/></svg>
                       Continue with Google
                     </button>

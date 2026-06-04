@@ -44,7 +44,7 @@ const tableData = [
   { id: 5, type: 'Rx', name: 'Lisinopril 10mg', desc: 'Tablets • 90 pack', sku: 'LIS-10', batch: 'B2024-0412', expiry: 'Jan 2025', qty: 0, status: 'Out of Stock', statusClass: 'bg-gray-100 text-gray-600', statusDot: 'bg-gray-400', supplier: 'GenericRx', iconBg: 'bg-red-50 text-red-700' },
 ];
 
-export default function InventoryDashboard({ setView }: { setView: (view: 'dashboard' | 'medicine' | 'inventory' | 'pos') => void }) {
+export default function InventoryDashboard({ setView }: { setView: (view: any) => void }) {
   const [chartRange, setChartRange] = useState('7d');
 
   return (
